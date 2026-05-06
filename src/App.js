@@ -23,7 +23,7 @@ function App() {
   }
 
   useEffect(function() {
-    fetch('http://localhost:5000/produkty')
+    fetch('https://mojshop-backend-production.up.railway.app')
       .then(function(res) { return res.json() })
       .then(function(data) { setProdukty(data) })
   }, [])

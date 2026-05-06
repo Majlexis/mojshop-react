@@ -9,7 +9,7 @@ function Admin() {
 
   // Načítaj produkty
   function nacitajProdukty() {
-    fetch('http://localhost:5000/produkty')
+    fetch('https://mojshop-backend-production.up.railway.app')
       .then(res => res.json())
       .then(data => setProdukty(data))
   }
@@ -20,7 +20,7 @@ function Admin() {
 
   // Pridaj produkt
   function pridajProdukt() {
-    fetch('http://localhost:5000/produkty', {
+    fetch('https://mojshop-backend-production.up.railway.app', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -42,7 +42,7 @@ function Admin() {
 
   // Vymaž produkt
   function vymazProdukt(id) {
-    fetch('http://localhost:5000/produkty/' + id, {
+    fetch('https://mojshop-backend-production.up.railway.app' + id, {
       method: 'DELETE'
     })
     .then(function() {
