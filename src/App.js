@@ -23,7 +23,7 @@ function App() {
   }
 
   useEffect(function() {
-    fetch('https://mojshop-backend-production.up.railway.app')
+    fetch('https://mojshop-backend-production.up.railway.app/produkty')
       .then(function(res) { return res.json() })
       .then(function(data) { setProdukty(data) })
   }, [])
